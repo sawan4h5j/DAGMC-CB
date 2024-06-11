@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+textarea {
+    resize: none
+}
+
+/* for login */
+
+.container {
+    position: relative;
+    /* padding: 30px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-bottom: 24px;
+    /* border: 1px solid ; */
+}
+
+.container .inputbox {
+    width: 100%;
+    position: relative;
+    /* border: 1px solid; */
+}
+
+.container .inputbox input {
+    position: relative;
+    padding: 8px 10px;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 1.25em;
+    z-index: 2;
+    background: transparent;
+    color: #fff;
+}
+
+.container .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    /* color: #333; */
+    color: inherit;
+    letter-spacing: 0.05em;
+}
+
+.container .inputbox input:valid~span,
+.container .inputbox input:focus~span {
+    font-size: 0.85em;
+    transform: translateY(-32px);
+}
+
+.container .inputbox i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, #2196f3, #ff4685);
+    transition: 0.5s;
+    z-index: 1;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.container .inputbox input:valid~i,
+.container .inputbox input:focus~i {
+    height: 100%;
+}
+
+
+
+
+
+
+/* for signup page */
+
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.signUpName_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    cursor: text;
+}
+
+.signUpInput_name {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+}
+
+signUpInput_name:invalid {
+    outline: 0;
+}
+
+input:focus,
+input:valid {
+    border-color: #00ff40;
+}
+
+input:focus~signUpName_label,
+input:focus~signUpName_text,
+input:valid~signUpInput_name {
+    font-size: 14px;
+    top: -24px;
+
+    color: #00f7ff;
+}
+
+
+
+
+
+/* //////About us////// */
+
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+
+}
+
+.nuha-container {
+
+    flex: 0 0 auto;
+    margin-right: 20px;
+    justify-content: space-evenly;
+}
+
+div.tabs > *{
+    @apply bg-slate-200 text-gray-700 rounded-full py-2 px-4 text-lg
+}
+
+div.tabs > *.active{
+    @apply bg-primary text-white
+}
